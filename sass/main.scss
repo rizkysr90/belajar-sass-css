@@ -1,5 +1,23 @@
-@import './variabel_nesting.scss';
+$color-primary-darken : #2E0249;
+$color-primary-lighten : #570A57;
+$color-secondary-darken: #A91079;
+$color-secondary-lighten: #F806CC;
 
+@function convertPxToRem($px) {
+    @return ($px / 16) * 1rem;
+}
+
+@import './variabel_nesting.scss';
+@import './mixin.scss';
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
 .heading1 {
     text-align: center;
+    color: black;
 }

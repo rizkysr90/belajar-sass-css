@@ -1,14 +1,5 @@
-$color-primary-darken : #2E0249;
-$color-primary-lighten : #570A57;
-$color-secondary-darken: #A91079;
-$color-secondary-lighten: #F806CC;
 
-@function convertPxToRem($px) {
-    @return ($px / 16) * 1rem;
-}
-body {
-    margin: 0;
-}
+
 .navbar {
     color: #fff;
     background-color: $color-primary-darken;
@@ -18,14 +9,16 @@ body {
     .navbar-header {
         margin-left: 0;
     }
-    .navbar-list {
+    &-list {
         display: flex;
         padding: 0;
         list-style-type: none;
-        .navbar-list-link {
+
+        &-link {
             display: flex;
             align-items: center;
             margin: 0 convertPxToRem(10);
+            
             a {
                 text-decoration: none;
                 background-color: $color-primary-lighten;

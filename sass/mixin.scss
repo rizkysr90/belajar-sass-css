@@ -1,0 +1,30 @@
+@mixin btn-style($col) {
+    cursor: pointer;
+    border-radius: convertPxToRem(50);
+    background-color: $col;
+    &:hover {
+        background-color: lighten($col, $amount: 15);
+    }
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+    }
+}
+.navbar2 {
+    display:flex;
+    justify-content: space-between;
+    padding: 0 convertPxToRem(32);
+    background-color: $color-primary-lighten;
+
+    &__btn-container {
+        display: flex;
+        align-items: center;
+        &__btn {
+            display: inline-block;
+            background-color: blue;
+            padding:  convertPxToRem(10) convertPxToRem(15);
+            margin: convertPxToRem(5);
+            @include btn-style($color-secondary-lighten);
+        }
+    }
+}
